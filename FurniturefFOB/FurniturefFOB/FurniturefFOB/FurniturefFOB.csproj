@@ -1,0 +1,198 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{8B74CEF4-BF8E-479D-B81C-0896579D75B9}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>FurniturefFOB</RootNamespace>
+    <AssemblyName>FurniturefFOB</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x86'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x86\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x86'">
+    <OutputPath>bin\x86\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>11.ico</ApplicationIcon>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="DevExpress.Data.v16.2, Version=16.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Printing.v16.2.Core, Version=16.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Sparkline.v16.2.Core, Version=16.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Utils.v16.2, Version=16.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraBars.v16.2, Version=16.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraEditors.v16.2, Version=16.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraGrid.v16.2, Version=16.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraLayout.v16.2, Version=16.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraPrinting.v16.2, Version=16.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="Newtonsoft.Json, Version=6.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Xml">
+      <Private>True</Private>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="absPostion.cs" />
+    <Compile Include="absRotation.cs" />
+    <Compile Include="ApplicationInit.cs" />
+    <Compile Include="BoardModel.cs" />
+    <Compile Include="BoxList.cs" />
+    <Compile Include="CreateImosXml.cs" />
+    <Compile Include="CreateKujialeObject.cs" />
+    <Compile Include="DALServicer.cs" />
+    <Compile Include="FrmBoardManger.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmBoardManger.Designer.cs">
+      <DependentUpon>FrmBoardManger.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmFilePath.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmFilePath.Designer.cs">
+      <DependentUpon>FrmFilePath.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Frmhelp.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Frmhelp.Designer.cs">
+      <DependentUpon>Frmhelp.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmPramAdd.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmPramAdd.Designer.cs">
+      <DependentUpon>FrmPramAdd.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmSyspram.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmSyspram.Designer.cs">
+      <DependentUpon>FrmSyspram.cs</DependentUpon>
+    </Compile>
+    <Compile Include="KJLobject.cs" />
+    <Compile Include="main.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="main.Designer.cs">
+      <DependentUpon>main.cs</DependentUpon>
+    </Compile>
+    <Compile Include="myDataSet.cs">
+      <DependentUpon>myDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="myDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>myDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="OleHeper.cs" />
+    <Compile Include="parameter.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="FrmBoardManger.resx">
+      <DependentUpon>FrmBoardManger.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmFilePath.resx">
+      <DependentUpon>FrmFilePath.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Frmhelp.resx">
+      <DependentUpon>Frmhelp.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmPramAdd.resx">
+      <DependentUpon>FrmPramAdd.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmSyspram.resx">
+      <DependentUpon>FrmSyspram.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="main.resx">
+      <DependentUpon>main.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\licenses.licx" />
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <None Include="app.config" />
+    <None Include="myDataSet.xsc">
+      <DependentUpon>myDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="myDataSet.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>myDataSet.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="myDataSet.xss">
+      <DependentUpon>myDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="11.ico" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

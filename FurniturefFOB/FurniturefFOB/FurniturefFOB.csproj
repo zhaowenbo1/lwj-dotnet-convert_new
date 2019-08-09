@@ -1,0 +1,214 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{8B74CEF4-BF8E-479D-B81C-0896579D75B9}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>FurniturefFOB</RootNamespace>
+    <AssemblyName>FurniturefFOB</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <Deterministic>true</Deterministic>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x86'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x86\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x86'">
+    <OutputPath>bin\x86\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>Resources\11.ico</ApplicationIcon>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Newtonsoft.Json, Version=6.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Xml">
+      <Private>False</Private>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Liweijia.KJL.VO\Caul.cs" />
+    <Compile Include="Liweijia.KJL.VO\Cuboid.cs" />
+    <Compile Include="Liweijia.KJL.VO\Dimension.cs" />
+    <Compile Include="Liweijia.KJL.VO\Point3D.cs" />
+    <Compile Include="Liweijia.Model\Postion.cs" />
+    <Compile Include="Liweijia.Model\Rotation.cs" />
+    <Compile Include="ApplicationInit.cs" />
+    <Compile Include="Liweijia.IMOS.VO\BoxList.cs" />
+    <Compile Include="Liweijia.Translate.Service\ImosXmlWriter.cs" />
+    <Compile Include="Liweijia.Translate.Service\KuJsonReader.cs" />
+    <Compile Include="Liweijia.Meta\DALServicer.cs" />
+    <Compile Include="Liweijia.UIView\FrmBoardManger.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Liweijia.UIView\FrmBoardManger.Designer.cs">
+      <DependentUpon>FrmBoardManger.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Liweijia.UIView\FrmFilePath.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Liweijia.UIView\FrmFilePath.Designer.cs">
+      <DependentUpon>FrmFilePath.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Liweijia.UIView\Frmhelp.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Liweijia.UIView\Frmhelp.Designer.cs">
+      <DependentUpon>Frmhelp.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Liweijia.UIView\FrmPramAdd.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Liweijia.UIView\FrmPramAdd.Designer.cs">
+      <DependentUpon>FrmPramAdd.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Liweijia.UIView\FrmSyspram.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Liweijia.UIView\FrmSyspram.Designer.cs">
+      <DependentUpon>FrmSyspram.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Liweijia.KJL.VO\KuModel.cs" />
+    <Compile Include="Liweijia.UIView\main.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Liweijia.UIView\main.Designer.cs">
+      <DependentUpon>main.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Liweijia.Meta\myDataSet.cs">
+      <DependentUpon>myDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Liweijia.Meta\myDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>myDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Liweijia.Meta\OleHeper.cs" />
+    <Compile Include="Liweijia.KJL.VO\Parameter.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Liweijia.UIView\FrmBoardManger.resx">
+      <DependentUpon>FrmBoardManger.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Liweijia.UIView\FrmFilePath.resx">
+      <DependentUpon>FrmFilePath.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Liweijia.UIView\Frmhelp.resx">
+      <DependentUpon>Frmhelp.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Liweijia.UIView\FrmPramAdd.resx">
+      <DependentUpon>FrmPramAdd.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Liweijia.UIView\FrmSyspram.resx">
+      <DependentUpon>FrmSyspram.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Liweijia.UIView\main.resx">
+      <DependentUpon>main.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\licenses.licx" />
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <None Include="app.config" />
+    <None Include="Liweijia.Meta\myDataSet.xsc">
+      <DependentUpon>myDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Liweijia.Meta\myDataSet.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>myDataSet.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Liweijia.Meta\myDataSet.xss">
+      <DependentUpon>myDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Resources\11.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
